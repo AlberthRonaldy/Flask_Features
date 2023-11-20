@@ -5,4 +5,5 @@ Adicionar 2 ou 3 features (recursos) a nossa rede social partindo do código que
 
 Features Desenvolvidas:
 1- Desenvolvido a landing page para navegação da rede social.
+
 2- Desenvolvido uma página para visualizar todos os postos da rede social (com botão de modo escuro/claro de preferência do usuário)
