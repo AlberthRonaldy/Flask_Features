@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+
+{% block titulo %}  Perfil do {{ user.username }} {% endblock %}
+
+
+{% block body %}
+
+    <nav>
+        <a href=" {{ url_for('cadastro') }} "> HOME </a>
+    </nav>
+    <h3> Faaala {{ user.username }}!  -  {{ mesa }} </h3>
+
+    {% if form %}
+        <h2> MEU PERFIL </h2>
+        <form method="POST" enctype="multipart/form-data">
+            {{ form.csrf_token }}
+
+            {{ form.text.label() }}
+            {{ form.text() }}
+
+            {{ form.photo.label() }}
+            {{ form.photo() }}
+
+            {{ form.btn() }}
+        </form>
+    {% endif %}
+
+    {% for post in user.posts %}
+        <!-- <img src="{{ url_for('static', filename='fotos_dos_posts/default.jpg') }}"> -->
+        <p>{{post.post_text}}</p>
+        <img class="img-thumbnail rounded" src="{{ url_for('static', filename='fotos_dos_posts/{}'.format(post.post_img)) }}">
+    {% endfor %}
+
+<footer class="rodape">
+    <p>&copy;2023 - Todos os direitos reservados</p>
+</footer>
+{% endblock %}

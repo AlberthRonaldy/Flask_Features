@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block body %}
+<nav>
+    <a href=" {{ url_for('cadastro') }} "> HOME </a>
+</nav>
+<button id="toggleMode">Alternar Modo</button>
+<h3>Explorar Posts</h1>
+<section class="container" id="postContainer">
+    <div class="imgs">
+        <ul>
+            {% for post in posts %}
+            <li class="posts">{{ post.post_text }} - por {{ post.user.username }}</li>
+            <img src="{{ url_for('static', filename='fotos_dos_posts/' + post.post_img) }}" alt="Imagem do post" height="300px" width="800px">
+        {% endfor %}
+        </ul>
+    </div>
+</section>
+<footer>
+    <p>&copy;2023 - Todos os direitos reservados</p>
+</footer>
+<script>
+    const container = document.getElementById('postContainer');
+    const toggleButton = document.getElementById('toggleMode');
+
+    toggleButton.addEventListener('click', () => {
+        container.classList.toggle('darkMode');
+    });
+</script>
+{% endblock %}

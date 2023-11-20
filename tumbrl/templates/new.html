@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block body %}
+<nav>
+    <a href=" {{ url_for('cadastro') }} "> HOME </a>
+</nav>
+
+<form method="POST">
+    {{ form.csrf_token }}
+
+    {{ form.email.label() }}
+    {{ form.email() }}
+
+    {{ form.usarname.label() }}
+    {{ form.usarname() }}
+
+    {{ form.password.label() }}
+    {{ form.password() }}
+
+    {{ form.checkPassword.label() }}
+    {{ form.checkPassword() }}
+
+    {{ form.btn() }}
+</form>
+<footer class="rodape">
+    <p>&copy;2023 - Todos os direitos reservados</p>
+</footer>
+{% endblock %}

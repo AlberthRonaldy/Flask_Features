@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+
+{% block body %}
+    {% block navigation %}
+        <header>
+            <h1>Tumblr</h1>
+            <nav id="menu">
+                <ul>
+                    <a href="{{ url_for('createAccount') }}">
+                        <li>Criar conta</li>
+                    </a>
+                    <a href="{{ url_for('homepage') }}">
+                        <li>Entrar</li>
+                    </a>
+                    <a href="{{ url_for('profile', user_id=current_user.id) }}">
+                        <li>Perfil</li>
+                    </a>
+                    <a href="{{ url_for('explorar_posts') }}">
+                        <li>Explorar Posts</li>
+                    </a>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <section id="section1" class="paralax">
+                <div class="conteudo">
+                    <h2>Bem-Vindo ao Tumbrl 🌟</h2><br>
+                    <p>Dê asas à sua criatividade e compartilhe momentos extraordinários conosco </p><br>
+                    <p>Tumbrl é mais do que uma rede social, é o seu espaço para se conectar, inspirar e ser inspirado.</p> <br>
+                    <p>📸 Compartilhe suas Histórias: Capture e compartilhe os momentos que tornam sua vida única. De viagens épicas a momentos cotidianos, cada história é uma peça importante do quebra-cabeça da sua jornada.</p><br>
+                    <p>🌐 Conecte-se com a Comunidade: Faça novas amizades e conecte-se com mentes afins. Descubra pessoas inspiradoras e construa uma comunidade que celebra a diversidade e a positividade.</p><br>
+                    <p>Explore, compartilhe, conecte-se. Seja parte do Tumbrl - O lugar onde suas histórias ganham vida! ✨</p><br>
+                </div>
+            </section>
+        </main>
+    {% endblock %}
+<footer>
+    <p>&copy;2023 - Todos os direitos reservados</p>
+</footer>
+{% endblock %}

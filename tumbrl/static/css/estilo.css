@@ -1,0 +1,184 @@
+/* Reset de algumas propriedades padrão do navegador */
+body, h1, h2, h3, p, form {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    background: linear-gradient(90deg, #3498db, #8e44ad);
+}
+
+h3 {
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    color: #fff;
+    background-color: #444; 
+    padding: 20px;
+    border-radius: 10px;
+    margin: 0 auto; 
+    width: 40%; /* Define a largura do retângulo */
+    box-sizing: border-box; /* Evita que a largura seja maior devido ao padding */
+    margin-bottom: 20px;
+    transition: background-color 0.3s ease;
+}
+
+h3:hover {
+    background-color: #555; 
+}
+
+nav {
+    background-color: #333;
+    padding: 10px;
+    text-align: center;
+    margin-bottom: 20px;
+    transition: background-color 0.3s ease;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    padding: 10px 20px;
+    margin: 0 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+nav a:hover {
+    background-color: #555;
+    color: #fff; 
+}
+
+form {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #4caf50;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+#toggleMode {
+    margin: 20px;
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#toggleMode.darkMode {
+    background-color: #555; 
+    color: #ddd;
+}
+
+ul {
+    list-style-type: none;
+    margin: auto;
+    text-align: center;
+}
+
+.posts{
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 20px; 
+    overflow: hidden; /* Evite que imagens grandes distorçam o layout */
+}
+
+img {
+    max-width: 100%;
+    max-height: 100%; 
+    object-fit: contain; /* Alterado para contain para garantir que a imagem caiba completamente */
+    border-radius: 5px;
+    margin-top: auto; /* Mova a margem superior para o final do elemento, empurrando a imagem para baixo */
+    flex-shrink: 0;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 30px;
+    border: 1px solid #333; /* Adicione uma borda à seção .container */
+    padding: 20px; 
+    margin: 50px;
+    background: linear-gradient(rgba(255, 255, 255, 1), rgba(255, 255, 255, 0)); /* Gradiente linear de branco para transparente */
+    transition: background 0.3s ease; /* Adiciona uma transição suave para a mudança de fundo */
+}
+
+.imgs{
+    width: calc(30% - 20px);
+    margin-bottom: 20px; 
+    padding: 10px;
+    text-align: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif!important;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+}  
+
+.darkMode {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0)); 
+    border-color: #666; /* Cor da borda para modo escuro */
+    color: #fff; /* Cor do texto para modo escuro */
+}
+
+#postContainer {
+    background: #fff;  /* Cor de fundo para o modo claro */
+    color: #333;  /* Cor do texto para o modo claro */
+}
+
+/* Definindo regras para o modo escuro */
+#postContainer.darkMode {
+    background: #191919;  /* Cor de fundo para o modo escuro */
+    color: #fff;  /* Cor do texto para o modo escuro */
+}
+
+#postContainer.darkMode .posts {
+    color: #333;  /* Cor do texto para o modo escuro */
+}
+
+
+.rodape {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0px;
+    text-align: center;
+    position: fixed;
+    bottom: 0; /* Fixa o rodapé na parte inferior da página */
+    width: 100%; /* Faz o rodapé ocupar a largura total da tela */
+}
